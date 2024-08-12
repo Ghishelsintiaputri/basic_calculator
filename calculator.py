@@ -7,56 +7,56 @@ class Calculator:
         self.history = []
     
     def add(self, a, b):
-        """Add two numbers and return result"""
+        """Add two numbers and return result."""
         result = a + b
         self._add_to_history(f"{a} + {b} = {result}")
         return result
     
     def subtract(self, a, b):
-        """Subtract b from a and return result"""
+        """Subtract b from a and return result."""
         result = a - b
         self._add_to_history(f"{a} - {b} = {result}")
         return result
     
     def multiply(self, a, b):
-        """Multiply two numbers and return result"""
+        """Multiply two numbers and return result."""
         result = a * b
-        self._add_to_history(f"{a} × {b} = {result}")
+        self._add_to_history(f"{a} * {b} = {result}")
         return result
     
     def divide(self, a, b):
-        """Divide a by b and return result"""
+        """Divide a by b and return result."""
         if b == 0:
             raise ValueError("Cannot divide by zero!")
         result = a / b
-        self._add_to_history(f"{a} ÷ {b} = {result}")
+        self._add_to_history(f"{a} / {b} = {result}")
         return result
     
     def power(self, a, b):
-        """Raise a to the power of b and return result"""
+        """Raise a to the power of b and return result."""
         result = a ** b
         self._add_to_history(f"{a} ^ {b} = {result}")
         return result
     
     def _add_to_history(self, operation):
-        """Add operation to history (internal method)"""
+        """Add operation to history."""
         self.history.append(operation)
     
     def get_history(self):
-        """Return list of all previous operations"""
+        """Return calculation history."""
         return self.history.copy()
     
     def clear_history(self):
-        """Clear the operation history"""
+        """Clear calculation history."""
         self.history.clear()
     
     def display_history(self):
-        """Display all operations in history"""
+        """Display calculation history."""
         if not self.history:
             print("No history available.")
             return
         
-        print("\n=== CALCULATION HISTORY ===")
+        print("\n--- Calculation History ---")
         for i, operation in enumerate(self.history, 1):
             print(f"{i}. {operation}")
-        print("===========================\n")
+        print("---------------------------\n")
