@@ -1,68 +1,70 @@
 ## Simple Calculator with History Tracking
 
 ### Overview
-A Python-based simple calculator that performs basic arithmetic operations and maintains a history of all calculations.
+A Python-based simple calculator that performs basic arithmetic operations and maintains a history of all calculations performed during the session.
 
 ### Features
-- **Basic Operations**: Addition, Subtraction, Multiplication, Division, Power
-- **History Tracking**: Keeps track of all operations performed
+- **Basic Arithmetic Operations**: Addition, Subtraction, Multiplication, Division, and Power
+- **History Tracking**: Keeps track of all calculations performed
 - **User-Friendly Interface**: Simple text-based menu system
-- **Error Handling**: Handles invalid inputs and division by zero
+- **Error Handling**: Proper validation and error messages
 - **Unit Tests**: Comprehensive test coverage
-
-### Files Structure
-- `calculator.py` - Core calculator logic and history management
-- `calculator_ui.py` - User interface and menu system
-- `main.py` - Application entry point
-- `test_calculator.py` - Unit tests for calculator functionality
 
 ### Requirements
 - Python 3.6 or higher
 
-### How to Use
+### Installation & Usage
 
-1. **Run the Calculator**:
+1. **Save all files** in the same directory:
+   - `calculator.py`
+   - `calculator_ui.py`
+   - `main.py`
+   - `test_calculator.py` (optional - for testing)
+
+2. **Run the calculator**:
    ```bash
    python main.py
    ```
 
-2. **Using the Menu**:
-   - Select operations 1-5 for arithmetic calculations
-   - Select 6 to view calculation history
-   - Select 7 to clear history
-   - Select 8 to exit
+3. **Follow the menu prompts**:
+   - Select operations (1-5) for arithmetic calculations
+   - Choose option 6 to view calculation history
+   - Choose option 7 to clear history
+   - Choose option 8 to exit
 
-3. **Running Tests**:
-   ```bash
-   python -m unittest test_calculator.py
-   ```
-   or
-   ```bash
-   python test_calculator.py
-   ```
+### Running Tests
+To run the unit tests:
+```bash
+python test_calculator.py
+```
+
+### File Structure
+- `calculator.py` - Core calculator logic and history management
+- `calculator_ui.py` - User interface and menu handling
+- `main.py` - Application entry point
+- `test_calculator.py` - Unit tests for calculator functions
 
 ### Example Usage
 ```
+1. Addition (+)
+2. Subtraction (-)
+3. Multiplication (*)
+4. Division (/)
+5. Power (^)
+6. View History
+7. Clear History
+8. Exit
+
 Enter your choice (1-8): 1
+
+--- Addition ---
 Enter first number: 10
 Enter second number: 5
 Result: 15.0
-
-Enter your choice (1-8): 6
-=== CALCULATION HISTORY ===
-1. 10 + 5 = 15.0
-===========================
 ```
 
-### Error Handling
-- Invalid number inputs are caught and prompt for re-entry
-- Division by zero is prevented with clear error messages
-- Invalid menu choices are handled gracefully
-
-### Extending the Calculator
-You can easily add new operations by:
-1. Adding the method in `calculator.py`
-2. Updating the menu in `calculator_ui.py`
-3. Adding corresponding tests in `test_calculator.py`
-
-The modular design makes it easy to maintain and extend functionality.
+### Notes
+- The calculator uses floating-point numbers for all operations
+- History is maintained only for the current session (cleared when program exits)
+- Division by zero is properly handled with error messages
+- The application includes proper input validation
